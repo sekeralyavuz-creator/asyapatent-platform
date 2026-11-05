@@ -1,27 +1,104 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asya Patent & Marka Tescil</title>
+    <title>Asya Patent & Marka Tescil | Yapay Zekâ Destekli Tescil Servisi</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-8">
-    <div class="max-w-3xl text-center space-y-6">
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-blue-400">
-            Asya Patent & Marka Tescil
-        </h1>
-        <p class="text-lg md:text-xl text-slate-300">
-            Yapay zekâ destekli marka, patent ve tasarım tescil platformuna hoş geldiniz.
-        </p>
-        <div class="flex gap-4 justify-center pt-4">
-            <a href="#" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg font-semibold transition">
-                Marka Tescil Soruştur
-            </a>
-            <a href="#" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg font-semibold transition">
-                Bilgi Merkezi
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white text-sm">AP</span>
+                Asya Patent
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <a href="#hizmetler" class="hover:text-brand-500 transition">Hizmetler</a>
+                <a href="#hakkimizda" class="hover:text-brand-500 transition">Hakkımızda</a>
+                <a href="#iletisim" class="hover:text-brand-500 transition">İletişim</a>
+            </div>
+            <a href="#sorgulama" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-500 rounded-xl text-sm font-semibold transition text-white shadow-lg shadow-brand-600/20">
+                Marka Sorgula
             </a>
         </div>
-    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-36 pb-20 px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
+            <span class="px-4 py-1.5 rounded-full bg-brand-900/50 border border-brand-500/30 text-brand-500 text-xs font-semibold uppercase tracking-wider">
+                Yapay Zekâ Destekli Marka Tescili
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
+                Markanızı Güvenle Koruma Altına Alın
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto">
+                Asya Patent ile Türk Patent ve Marka Kurumu nezdindeki tescil süreçlerinizi hızlı, şeffaf ve yapay zekâ destekli sorgulama ile başlatın.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <a href="#sorgulama" class="px-8 py-4 bg-brand-600 hover:bg-brand-500 rounded-xl font-bold transition shadow-xl shadow-brand-600/30 text-white">
+                    Ücretsiz Marka Sorgulama
+                </a>
+                <a href="#hizmetler" class="px-8 py-4 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl font-bold transition">
+                    Hizmetlerimizi İnceleyin
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="hizmetler" class="py-20 px-6 bg-slate-900/50 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition">
+                <div class="w-12 h-12 bg-brand-600/20 text-brand-500 rounded-xl flex items-center justify-center mb-6 text-xl font-bold">01</div>
+                <h3 class="text-xl font-bold mb-3 text-white">Marka Tescili</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Markanızın kullanılabilirlik durumunu analiz ediyor, benzerlik risklerini önceden saptayarak başvuru sürecinizi yönetiyoruz.
+                </p>
+            </div>
+            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition">
+                <div class="w-12 h-12 bg-brand-600/20 text-brand-500 rounded-xl flex items-center justify-center mb-6 text-xl font-bold">02</div>
+                <h3 class="text-xl font-bold mb-3 text-white">Patent & Tasarım</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Teknolojik buluşlarınızı ve özgün tasarımlarınızı ulusal ve uluslararası standartlarda koruma altına alıyoruz.
+                </p>
+            </div>
+            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition">
+                <div class="w-12 h-12 bg-brand-600/20 text-brand-500 rounded-xl flex items-center justify-center mb-6 text-xl font-bold">03</div>
+                <h3 class="text-xl font-bold mb-3 text-white">Hukuki İtiraz Takibi</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    YİDK kararlarına itirazlar, bülten takipleri ve üçüncü taraf itiraz yönetimi ile tam hukuki koruma sağlıyoruz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Asya Patent & Marka Tescil Danışmanlığı. Tüm hakları saklıdır.</p>
+    </footer>
+
 </body>
 </html>
